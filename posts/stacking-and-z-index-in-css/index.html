@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stacking and z-index in CSS | Nils' notes</title>
+  <meta name="description" content="A reminder to understand CSS stacking context before changing z-index values.">
+  <link rel="canonical" href="https://nilsandrey.com/posts/stacking-and-z-index-in-css/">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+  <div class="site-shell post">
+    <header class="site-header">
+      <h1 class="site-title"><a href="/">Nils' notes</a></h1>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <article>
+        <p class="breadcrumb"><a href="/blog/">← Blog</a></p>
+        <h2>Stacking and z-index in CSS</h2>
+        <p class="post-meta"><time datetime="2022-06-29">29 Jun, 2022</time></p>
+        <p>A friendly reminder to don't change the z-index like gambling with the highest value, if it doesn't work as expected check the stacking context of the early elements in the hierarchy. <code>position</code> is just one of the attrs creating stacking contexts. e.g. check <code>isolation</code>.</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context">The stacking context at MDN</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/isolation">isolation attribute at MDN</a></li></ul><p>This is basic stuff for a lot of developers but is often misused anyway. Yes, read this whole thing first or continue gambling.</p><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index">Understanding CSS z-index</a></li></ul><p class="tags">#css #tid-bit</p>
+        <p class="source-link">Originally published on <a href="https://nils.bearblog.dev/stacking-and-z-index-in-css/">Bear</a>.</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="/blog/">Blog</a> · <a href="/">Home</a></p>
+    </footer>
+  </div>
+</body>
+</html>

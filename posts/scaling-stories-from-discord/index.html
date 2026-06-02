@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scaling Stories from Discord | Nils' notes</title>
+  <meta name="description" content="Notes about Discord engineering migrations from MongoDB to Cassandra to ScyllaDB.">
+  <link rel="canonical" href="https://nilsandrey.com/posts/scaling-stories-from-discord/">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+  <div class="site-shell post">
+    <header class="site-header">
+      <h1 class="site-title"><a href="/">Nils' notes</a></h1>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <article>
+        <p class="breadcrumb"><a href="/blog/">← Blog</a></p>
+        <h2>Scaling Stories from Discord</h2>
+        <p class="post-meta"><time datetime="2023-06-18">18 Jun, 2023</time></p>
+        <p>The <a href="https://discord.com/category/engineering">Engineering &amp; developers at Discord</a> moved from <a href="https://www.mongodb.com/">MongoDB</a> to <a href="https://cassandra.apache.org/">Cassandra</a> once to process billions of messages, now they recently published about migrating from Cassandra to <a href="https://www.scylladb.com/">ScyllaDB</a> to process trillions of messages.</p>
+<blockquote><p>"177 Cassandra nodes to 72 ScyllaDB nodes</p><p>Latency to fetch went down from 40–125ms to 15 ms</p><p>Message insert went from 5–70ms to consistent 5 ms."</p></blockquote>
+<p>I'm interested in checking all these related materials:</p>
+<ul>
+<li>Blog post from the Discord team: <a href="https://discord.com/blog/how-discord-stores-trillions-of-messages">How Discord Stores Trillions Of Messages</a> (<a href="https://discu.eu/">Online discussions</a>)</li>
+<li>An expected <a href="https://www.youtube.com/@hnasr">video from Hussein Nasser about it</a>.</li>
+<li>Benchmark (from ScyllaDB): <a href="https://www.scylladb.com/">ScyllaDB vs Apache Cassandra</a>.</li>
+</ul>
+<h3>Also consider</h3>
+<ul>
+<li>The <a href="https://discord.com/blog">Discord blog</a> (<a href="https://discord.com/blog/rss.xml">RSS</a>) is a gem.</li>
+<li>I'm always fascinated by the technical details of this kind of engineering migrations. So, I check from time to time materials like this <a href="https://github.com/kiswono/tech-migrations">List of Tech Migrations</a> maintained by Kiswono Prayogo.</li>
+</ul>
+        <p class="source-link">Originally published on <a href="https://nils.bearblog.dev/scaling-stories-from-discord/">Bear</a>.</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="/blog/">Blog</a> · <a href="/">Home</a></p>
+    </footer>
+  </div>
+</body>
+</html>
