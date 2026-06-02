@@ -138,6 +138,37 @@ li + li {
   margin-top: 1.3rem;
 }
 
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.4rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  background: var(--paper-soft);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--paper-soft) 84%, var(--accent));
+  border-color: var(--accent);
+}
+
+.social-links img {
+  width: 1.15rem;
+  height: 1.15rem;
+  filter: invert(91%) sepia(12%) saturate(534%) hue-rotate(335deg) brightness(105%) contrast(91%);
+}
+
 .post-list {
   margin: 1.1rem 0 0;
   padding: 0;
