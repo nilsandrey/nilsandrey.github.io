@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gap attribute is not Grid exclusive (draft) | Nils' notes</title>
-  <meta name="description" content="A note that CSS gap applies to flex layout too.">
+  <title>The CSS &quot;gap&quot; property is not only for Grid | Nils' notes</title>
+  <meta name="description" content="A note that CSS gap works across Grid, Flexbox, and multi-column layout.">
   <link rel="canonical" href="https://nilsandrey.com/posts/gap-attribute-is-not-grid-exclusive/">
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
@@ -21,9 +21,57 @@
     <main class="content">
       <article>
         <p class="breadcrumb"><a href="/blog/">← Blog</a></p>
-        <h2>Gap attribute is not Grid exclusive (draft)</h2>
+        <h2>The CSS &quot;gap&quot; property is not only for Grid</h2>
         <p class="post-meta"><time datetime="2022-07-04">04 Jul, 2022</time></p>
-        <p>gap (grid-gap) - CSS: Cascading Style Sheets | MDN (mozilla.org)</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap">https://developer.mozilla.org/en-US/docs/Web/CSS/gap</a></p><p>Is applicable to flex</p><p class="tags">#css #web</p>
+        <p>When I first learned CSS Grid, I associated the &quot;gap&quot; property almost exclusively with grid layouts. That made sense at the time: older examples often used names like &quot;grid-gap&quot;, &quot;grid-row-gap&quot;, and &quot;grid-column-gap&quot;.</p>
+        <p>But &quot;gap&quot; is not Grid-exclusive.</p>
+        <p>Today, &quot;gap&quot; is a general spacing property that works across multiple CSS layout modes, including:</p>
+        <ul>
+          <li>CSS Grid</li>
+          <li>Flexbox</li>
+          <li>Multi-column layout</li>
+        </ul>
+        <p>That means this is perfectly valid:</p>
+        <pre><code>.nav {
+  display: flex;
+  gap: 1rem;
+}</code></pre>
+        <p>And so is this:</p>
+        <pre><code>.cards {
+  display: grid;
+  gap: 1.5rem;
+}</code></pre>
+        <p>The benefit is simple: &quot;gap&quot; lets the container control the spacing between its children without adding margins to every item.</p>
+        <p>Before using &quot;gap&quot; with Flexbox, many layouts relied on patterns like this:</p>
+        <pre><code>.item {
+  margin-right: 1rem;
+}
+
+.item:last-child {
+  margin-right: 0;
+}</code></pre>
+        <p>Or more complicated variants when wrapping was involved.</p>
+        <p>With Flexbox gap, the spacing belongs where it should: on the parent layout container.</p>
+        <pre><code>.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}</code></pre>
+        <p>This is cleaner, easier to maintain, and usually more predictable than managing margins on individual children.</p>
+        <p>One useful thing to remember is that &quot;gap&quot; is shorthand for:</p>
+        <pre><code>gap: row-gap column-gap;</code></pre>
+        <p>So you can define one value:</p>
+        <pre><code>.container {
+  gap: 1rem;
+}</code></pre>
+        <p>Or separate vertical and horizontal spacing:</p>
+        <pre><code>.container {
+  gap: 1rem 2rem;
+}</code></pre>
+        <p>In Grid, that maps naturally to rows and columns. In Flexbox, the exact meaning depends on the flex direction and whether items wrap, but the idea is the same: it controls spacing between flex items and flex lines.</p>
+        <p>So the takeaway is:</p>
+        <p>&quot;gap&quot; started with strong Grid associations, but it is now a broader layout spacing tool. Use it with Grid, use it with Flexbox, and avoid unnecessary margin hacks when the spacing is really a responsibility of the parent layout.</p>
+        <p class="tags">#css #web</p>
         <p class="source-link">Originally published on <a href="https://nils.bearblog.dev/gap-attribute-is-not-grid-exclusive/">Bear</a>.</p>
       </article>
     </main>
