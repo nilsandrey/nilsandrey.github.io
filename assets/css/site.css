@@ -138,63 +138,6 @@ li + li {
   margin-top: 1.3rem;
 }
 
-.profile-card {
-  display: grid;
-  grid-template-columns: 5rem 1fr;
-  gap: 1rem;
-  align-items: center;
-  margin: 1.4rem 0;
-  padding: 0.9rem;
-  background: var(--paper-soft);
-  border: 1px solid var(--rule);
-  border-radius: 16px;
-}
-
-.profile-card img {
-  width: 5rem;
-  height: 5rem;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-}
-
-.eyebrow {
-  display: block;
-  color: var(--muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-top: 1.4rem;
-}
-
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.35rem;
-  height: 2.35rem;
-  background: var(--paper-soft);
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  transition: transform 160ms ease, border-color 160ms ease;
-}
-
-.social-links a:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-}
-
-.social-links img {
-  width: 1.15rem;
-  height: 1.15rem;
-}
-
 .post-list {
   margin: 1.1rem 0 0;
   padding: 0;
@@ -232,9 +175,5 @@ li + li {
   .content {
     padding: 1rem;
     border-radius: 14px;
-  }
-
-  .profile-card {
-    grid-template-columns: 1fr;
   }
 }
