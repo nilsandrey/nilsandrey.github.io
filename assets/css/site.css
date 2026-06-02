@@ -208,3 +208,47 @@ li + li {
     border-radius: 14px;
   }
 }
+
+.post-meta,
+.breadcrumb,
+.source-link,
+.tags {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.breadcrumb {
+  margin-bottom: 0.75rem;
+}
+
+article h4 {
+  margin: 1.4rem 0 0.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+blockquote {
+  margin: 1.1rem 0;
+  padding: 0.15rem 0 0.15rem 1rem;
+  color: color-mix(in srgb, var(--text) 88%, var(--muted));
+  border-left: 3px solid var(--accent);
+}
+
+pre,
+code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 0.85rem;
+  background: var(--paper-soft);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}

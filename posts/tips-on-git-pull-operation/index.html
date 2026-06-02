@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tips on git pull operation | Nils' notes</title>
+  <meta name="description" content="A quick note about git pull, fetch, merge, rebase, fast-forward, and force options.">
+  <link rel="canonical" href="https://nilsandrey.com/posts/tips-on-git-pull-operation/">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+  <div class="site-shell post">
+    <header class="site-header">
+      <h1 class="site-title"><a href="/">Nils' notes</a></h1>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <article>
+        <p class="breadcrumb"><a href="/blog/">← Blog</a></p>
+        <h2>Tips on git pull operation</h2>
+        <p class="post-meta"><time datetime="2021-06-02">02 Jun, 2021</time></p>
+        <p>Git is full of shorthands like in CSS. Did you know pull is not one of the basic commands?</p><pre><code>pull = fetch + merge</code></pre><p>So you can modify its behaviour more aware.</p><p>By default, it runs <code>fetch</code> followed by <code>merge</code>, e.g. start merging your main with the fetched main on the index. Can potentially get into a conflict state like on any merge.</p><p>Modify at first you pull command with...</p><p>◾ <code>--rebase</code>, it runs git rebase instead of git merge.<br>◾ <code>--ff</code> don't even start the merge if there's any conflict (useful with repos at not-clean state).</p><p>Modify at first you pull command with...</p><p>◾ <code>--force</code> inverse of the commonly described "push force".</p><p>◾ <code>--no-commit</code> start the merge but left the possible needed commit to you.</p><p class="tags">#git</p>
+        <p class="source-link">Originally published on <a href="https://nils.bearblog.dev/tips-on-git-pull-operation/">Bear</a>.</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="/blog/">Blog</a> · <a href="/">Home</a></p>
+    </footer>
+  </div>
+</body>
+</html>
