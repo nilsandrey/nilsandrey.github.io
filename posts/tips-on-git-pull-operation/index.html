@@ -24,7 +24,6 @@
         <h2>Tips on git pull operation</h2>
         <p class="post-meta"><time datetime="2021-06-02">02 Jun, 2021</time></p>
         <p>Git is full of shorthands like in CSS. Did you know pull is not one of the basic commands?</p><pre><code>pull = fetch + merge</code></pre><p>So you can modify its behaviour more aware.</p><p>By default, it runs <code>fetch</code> followed by <code>merge</code>, e.g. start merging your main with the fetched main on the index. Can potentially get into a conflict state like on any merge.</p><p>Modify at first you pull command with...</p><p>◾ <code>--rebase</code>, it runs git rebase instead of git merge.<br>◾ <code>--ff</code> don't even start the merge if there's any conflict (useful with repos at not-clean state).</p><p>Modify at first you pull command with...</p><p>◾ <code>--force</code> inverse of the commonly described "push force".</p><p>◾ <code>--no-commit</code> start the merge but left the possible needed commit to you.</p><p class="tags">#git</p>
-        <p class="source-link">Originally published on <a href="https://nils.bearblog.dev/tips-on-git-pull-operation/">Bear</a>.</p>
       </article>
     </main>
 
